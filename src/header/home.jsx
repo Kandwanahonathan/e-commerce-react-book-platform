@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
     return(
-        <div className="bg-dark">
+        <div className="">
 
             <div>
                 <img src="" alt="" />
