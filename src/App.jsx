@@ -11,9 +11,11 @@ function App() {
     <>
     
     <BrowserRouter>
-    <nav>
-      <NavLink to='/home'>Home</NavLink>
-      <NavLink to='/book'> Book-visit</NavLink>
+    <nav className="navbar bg-primary navbar-dark navbar-expand-lg px-4">
+      <div className='navbar-nav'>
+      <NavLink to='/home' className="nav-link text-white mx-3">Home</NavLink>
+      <NavLink to='/book' className="nav-link text-white mx-3"> Book-visit</NavLink>
+      </div>
     </nav>
 
     <Routes>
