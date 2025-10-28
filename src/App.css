@@ -1,0 +1,7 @@
+.nav-link.active{
+    font-weight: bold;
+    border-bottom: 3px solid rgb(212, 136, 5);
+}
+.navbar{
+    box-shadow: 0 2px 8px rgb(60, 103, 86);
+}
