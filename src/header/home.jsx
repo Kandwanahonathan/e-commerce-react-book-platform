@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-import '../assets/my-app/src/assets/bg of book.jpg'
+import bgBook from "../assets/lamp.jpg";
 
 function Home() {
     const [promo,setPromo]=useState(["20% off on all fantasy books!",
@@ -21,14 +21,21 @@ function Home() {
   ]);
 
 return(
-    <div className="container-fluid">
-        <img src="bg of book" alt=" fine bckground " className="img-fluid"/>
+    <div className="container-fluid ms-auto">
+        <img src={bgBook} alt="bckground" className="img-fluid" style={{
+            backgroundSize:"cover",
+            
+            backgroundImage:`url(${bgBook})`,
+            width:"100%",
+            height:"70vh"
+
+        }}/>
 
         <div>
             <h1>promotion to you</h1>
             
                 {
-                    promo.map((item,index)=>(
+                     promo.map((item,index)=>(
                         <p key={index}>{item}</p>
                     ))
                 }
