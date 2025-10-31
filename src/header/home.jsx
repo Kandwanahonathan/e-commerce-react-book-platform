@@ -8,7 +8,8 @@ function Home() {
   const [futureBook,setfutureBook] =useState([
   { title: "Magic of Thinking Big", author: "David Schwartz", price: 12.99 },
   { title: "Atomic Habits", author: "James Clear", price: 15.99 },
-  { title: "The Alchemist", author: "Paulo Coelho", price: 10.99 },]);
+  { title: "The Alchemist", author: "Paulo Coelho", price: 10.99 },
+]);
   const[testimon, setTestimon]=useState([
       "This bookstore changed my life!",
   "Amazing selection and fast delivery!",
@@ -22,14 +23,7 @@ function Home() {
 
 return(
     <div className="container-fluid ms-auto">
-        <img src={bgBook} alt="bckground" className="img-fluid" style={{
-            backgroundSize:"cover",
-            
-            backgroundImage:`url(${bgBook})`,
-            width:"100%",
-            height:"70vh"
-
-        }}/>
+        <img src={bgBook} alt="bckground" className="img-fluid" style={{}}/>
 
         <div>
             <h1>promotion to you</h1>
