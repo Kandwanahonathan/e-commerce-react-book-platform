@@ -5,3 +5,11 @@
 .navbar{
     box-shadow: 0 2px 8px rgb(60, 103, 86);
 }
+#root {
+  background-color: #adcfe9;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+.container-fluid{
+    background-color: #53a5e3;
+}

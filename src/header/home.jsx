@@ -1,44 +1,54 @@
 import React,{useState,useEffect} from "react";
-import bgBook from "../assets/lamp.jpg";
+import library from "../assets/library.jpg";
+import lamp from "../assets/lamp.jpg"
+import animation from "../assets/magic-animation.jpg";
+import magic from "../assets/magic.jpeg"
+import night from "../assets/night-magic.gif";
+import printest from "../assets/printest-magic.jpeg";
+function Home(){
 
-function Home() {
-    const [promo,setPromo]=useState(["20% off on all fantasy books!",
-  "New arrivals: Bestselling novels this month",
-  "Free shipping on orders above $50"]);
-  const [futureBook,setfutureBook] =useState([
-  { title: "Magic of Thinking Big", author: "David Schwartz", price: 12.99 },
-  { title: "Atomic Habits", author: "James Clear", price: 15.99 },
-  { title: "The Alchemist", author: "Paulo Coelho", price: 10.99 },
-]);
-  const[testimon, setTestimon]=useState([
-      "This bookstore changed my life!",
-  "Amazing selection and fast delivery!",
-  "Highly recommend for book lovers!"
-  ]);
-  const [alert,setAlert]=useState([
-     "We now deliver internationally!",
-  "New reading club starting next week!",
-  "Subscribe for exclusive offers!"
-  ]);
+    const slides=[
+        {img:library,text:"discover your next greater book to read 📚"},
+        {img:lamp,text:"Enjoy 20% off on new arrival !!"},
+        {img:animation,text:"fees to delivery is cheap dont't worry"},
+        {img:magic,text:"you will do your own magic"},
+        {img:night,text:"you will do your own magic even though it is night you will do your's"},
+        {img:printest,text:"you will do your own magic even though it is night you will do your's"},
+];
+const [currentIndex, setCurrentIndex]=useState(0);
+
+useEffect(()=>{
+
+    const interval=setInterval(()=>{
+        setCurrentIndex((prev)=>(prev+1)% slides.length)
+        return ()=>clearInterval(interval)
+    },10000)
+
+},[slides.length])
 
 return(
-    <div className="container-fluid ms-auto">
-        <img src={bgBook} alt="bckground" className="img-fluid" style={{}}/>
+    <div className="d-flex align-items-center justify-content-center text-center text-white" 
+    style={{
+        height:"70vh",
+        backgroundImage: `url(${slides[currentIndex].img})`,
+        backgroundSize:"cover",
+        backgroundPosition:"center",
+        transition:"background-image 5s ease-in-out"
+    }}>
 
-        <div>
-            <h1>promotion to you</h1>
+        <div style={{
+            backgroundColor:"rgba(0,0,0,0.5)",
+            padding:"40px",
+            borderRadius:"10px"
             
-                {
-                     promo.map((item,index)=>(
-                        <p key={index}>{item}</p>
-                    ))
-                }
-            
-          
+        }}>
+             <h1 className="fw-bold">{slides[currentIndex].text}</h1>
+        <p className="fs-5 mt-3 fw-bold" style={{color:" rgba(245, 170, 40, 1)"}}>Welcome to Our Bookstore</p>
+
         </div>
 
     </div>
 )
-
+    
 }
 export default Home
