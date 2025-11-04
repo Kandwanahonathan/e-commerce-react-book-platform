@@ -5,17 +5,18 @@ import './App.css'
 import Home from './header/home'
 import {BrowserRouter,NavLink,Route,Routes} from "react-router-dom"
 import Visit from './header/book-visit'
+import Footer from './footer/footer'
 function App() {
  
   return (
     <>
     
     <BrowserRouter>
-    <nav className="navbar bg-success navbar-dark navbar-expand-lg px-8 mb-2">
-      <a className="navbar-brand fw-bold text-warning" href="#">BookStore</a>
-      <div className='navbar-nav ms-auto'>
+    <nav className="navbar fixed-top bg-success navbar-dark navbar-expand-lg px-8 mb-2" >
+      <a className="navbar-brand  fw-bold text-warning" href="#">BookStore</a>
+      <div className='navbar-nav ms-auto' >
       <NavLink to='/' className="nav-link text-white mx-3">Home</NavLink>
-      <NavLink to='/book' className="nav-link text-white mx-3"> Book-Visit</NavLink>
+      <NavLink to='/book' className="nav-link text-white mx-3">Shop</NavLink>
       </div>
     </nav>
 
@@ -24,6 +25,7 @@ function App() {
       <Route path="/book" element={<Visit/>}/>
     </Routes>
     </BrowserRouter>
+    <Footer/>
     </>
   )
 }

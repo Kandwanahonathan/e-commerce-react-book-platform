@@ -21,13 +21,15 @@ useEffect(()=>{
 
     const interval=setInterval(()=>{
         setCurrentIndex((prev)=>(prev+1)% slides.length)
-        return ()=>clearInterval(interval)
+        
     },10000)
+    return ()=>clearInterval(interval)
 
 },[slides.length])
 
 return(
-    <div className="d-flex align-items-center justify-content-center text-center text-white" 
+    <>
+    <div className="d-flex align-items-center justify-content-center text-center text-white mb-3" 
     style={{
         height:"70vh",
         backgroundImage: `url(${slides[currentIndex].img})`,
@@ -37,17 +39,26 @@ return(
     }}>
 
         <div style={{
-            backgroundColor:"rgba(0,0,0,0.5)",
+            backgroundColor:" rgba(0,0,0,0.5)",
             padding:"40px",
-            borderRadius:"10px"
+            borderRadius:"10px  "
             
         }}>
              <h1 className="fw-bold">{slides[currentIndex].text}</h1>
         <p className="fs-5 mt-3 fw-bold" style={{color:" rgba(245, 170, 40, 1)"}}>Welcome to Our Bookstore</p>
 
         </div>
+        
 
     </div>
+    
+    <section id="contact" className="my-3 p-4  text-light text-center mb-3 "   style={{ minHeight: "35vh", backgroundColor: "#3e5f66",}}>
+            <h2 className="text-white">Contact Us</h2>
+            <p>Email: info@bookstore.com</p>
+            
+
+        </section>
+        </>
 )
     
 }
