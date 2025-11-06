@@ -51,12 +51,13 @@ return(
         
 
     </div>
-    
-    <section id="contact" className="my-3 p-4  text-light text-center mb-3 "   style={{ minHeight: "35vh", backgroundColor: "#3e5f66",}}>
+    <div>
+        
+    </div>
+    <section id="contact" className="my-3 p-4  text-light text-center mb-3 "style={{ minHeight: "25vh", 
+        backgroundColor:"rgba(90, 87, 87, 0.5)"}}>
             <h2 className="text-white">Contact Us</h2>
             <p>Email: info@bookstore.com</p>
-            
-
         </section>
         </>
 )
