@@ -13,3 +13,7 @@
 .container-fluid{
     background-color: #53a5e3;
 }
+.a.active{
+    font-weight: bold;
+    border-bottom: 3px solid rgb(212, 136, 5);
+}

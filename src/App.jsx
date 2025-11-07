@@ -16,7 +16,8 @@ function App() {
       <a className="navbar-brand  fw-bold text-warning" href="#">BookStore</a>
       <div className='navbar-nav ms-auto' >
       <NavLink to='/' className="nav-link text-white mx-3">Home</NavLink>
-      <NavLink to='/book' className="nav-link text-white mx-3">VisitBook</NavLink>
+      <NavLink to='/book' className="nav-link text-white mx-3">Books</NavLink>
+      <a href="#contact" className="nav-link text-warning mx-3">Contact</a>
       </div>
     </nav>
 

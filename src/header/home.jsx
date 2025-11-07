@@ -73,18 +73,18 @@ return(
     <div className="container my-5" style={{ backgroundColor: "#f8f9fa",width:"100vw"}}>
 
       <h1 className="text-center mb-4 text-success fw-bold">FuturedBooks in BookStore</h1>
-      <div className="d-flex flex-wrap  gap-4">
+      <div className="d-flex flex-wrap  gap-4 shadow-lg">
 
         {FeaturedBook.map((book,index)=>(
-            <div key={index} className="card card-shadow" style={{width:"300px"}}>
+            <div key={index} className="card "  style={{
+              width:"300px",
+              borderRadius:"15px",
+              overflow:"hidden",
+              transition:"transform 0.3s",
+              cursor:"pointer"
+          }}>
                 <img src={book.img} alt={book.title} className="card-img-top" style={{height:"200px", objectFit:"cover"}}/>
-                <div className="card shadow-lg-" style={{
-                    width:"250",
-                    borderRadius:"1px",
-                    overflow:"hidden",
-                    transition:"transform 0.3s",
-                    cursor:"pointer"
-                }}
+                <div 
                 onMouseEnter={e => e.currentTarget.style.transform="scale(1.05)"}
                 onMouseLeave={e =>e.currentTarget.style.transform="scale(1)"}
                 >
