@@ -6,13 +6,13 @@ import magic from "../assets/magic.jpeg"
 import night from "../assets/night-magic.gif";
 import printest from "../assets/printest-magic.jpeg";
 //featured book as card
-import english from "../assets/feutured-book/englishBook.jpg";
-import flower from "../assets/feutured-book/flower.jpg";
-import old_books from "../assets/feutured-book/old_books.jpg";
-import money from "../assets/feutured-book/money.jpg";
-import political from "../assets/feutured-book/politicalScience.jpg";
-import colonial from "../assets/feutured-book/pre-colonial-book.jpg";
-import zoology from "../assets/feutured-book/zoology.jpg";
+import english from "../assets/featured-book/englishBook.jpg";
+import flower from "../assets/featured-book/flower.jpg";
+import old_books from "../assets/featured-book/old_books.jpg";
+import money from "../assets/featured-book/money.jpg";
+import political from "../assets/featured-book/politicalScience.jpg";
+import colonial from "../assets/featured-book/pre-colonial-book.jpg";
+import zoology from "../assets/featured-book/zoology.jpg";
 function Home(){
 
     const slides=[
@@ -38,10 +38,11 @@ useEffect(()=>{
 const FeaturedBook=[
     {img:english,title:"Learn English", author:"Nathan",price:"$5"},
     {img:flower,title:"once you read this your mind will be grown well" ,author:"Gahigi",price:"$4"},
-    // {img:colonial,title:"Learn English" ,author:"Sylivia"},
+    {img:colonial,title:"Learn English" ,author:"Sylivia"},
     {img:political,title:"hey politian this book is for u ", author:"Gentille",price:"$10"},
     {img:zoology,title:"learn zoology dear friend", author:"Manzi",price:"$15"},
     {img:old_books,title:"do you want the clear history read this book", author:"Harerimana",price:"$115"},
+    {img:flower,title:"once you read this your mind will be grown well" ,author:"Gahigi",price:"$4"},
     {img:money,title:"physchology for money are you ready to bercome a rich your wwelcome in the world of reach" ,author:"Akandwanaho",price:"$50"}
 ]
 
@@ -70,7 +71,7 @@ return(
 
     </div>
     {/* card for futured book */}
-    <div className="container my-5" style={{ backgroundColor: "#f8f9fa",width:"100vw"}}>
+    <div className="container-fluid gap-4 my-5" style={{ backgroundColor: "#f8f9fa",width:"100vw"}}>
 
       <h1 className="text-center mb-4 text-success fw-bold">FuturedBooks in BookStore</h1>
       <div className="d-flex flex-wrap  gap-4 shadow-lg">
@@ -84,6 +85,7 @@ return(
               cursor:"pointer"
           }}>
                 <img src={book.img} alt={book.title} className="card-img-top" style={{height:"200px", objectFit:"cover"}}/>
+
                 <div 
                 onMouseEnter={e => e.currentTarget.style.transform="scale(1.05)"}
                 onMouseLeave={e =>e.currentTarget.style.transform="scale(1)"}
@@ -91,6 +93,7 @@ return(
                     <h5 className="card-title text-center"><b>Tittle:</b>{book.title}</h5>
                     <h5 className="card-title text-center">Author:<b>{book.author}</b></h5>
                     <h5 className="card-title text-center">price:<b>{book.price}</b></h5>
+                    <button >open</button>
                 </div>
             </div>
         ))}
