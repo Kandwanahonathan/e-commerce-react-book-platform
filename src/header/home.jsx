@@ -8,7 +8,7 @@ import printest from "../assets/printest-magic.jpeg";
 //featured book as card
 import english from "../assets/featured-book/englishBook.jpg";
 import flower from "../assets/featured-book/flower.jpg";
-import old_books from "../assets/featured-book/old_books.jpg";
+
 import money from "../assets/featured-book/money.jpg";
 import political from "../assets/featured-book/politicalScience.jpg";
 import colonial from "../assets/featured-book/pre-colonial-book.jpg";
