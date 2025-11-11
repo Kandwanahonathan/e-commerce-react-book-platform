@@ -41,7 +41,8 @@ const FeaturedBook=[
     {img:colonial,title:"Learn English" ,author:"Sylivia"},
     {img:political,title:"hey politian this book is for u ", author:"Gentille",price:"$10"},
     {img:zoology,title:"learn zoology dear friend", author:"Manzi",price:"$15"},
-    {img:old_books,title:"do you want the clear history read this book", author:"Harerimana",price:"$115"},
+    {img:political,title:"hey politian this book is for u ", author:"Gentille",price:"$10"},
+    
     {img:flower,title:"once you read this your mind will be grown well" ,author:"Gahigi",price:"$4"},
     {img:money,title:"physchology for money are you ready to bercome a rich your wwelcome in the world of reach" ,author:"Akandwanaho",price:"$50"}
 ]
@@ -93,7 +94,7 @@ return(
                     <h5 className="card-title text-center"><b>Tittle:</b>{book.title}</h5>
                     <h5 className="card-title text-center">Author:<b>{book.author}</b></h5>
                     <h5 className="card-title text-center">price:<b>{book.price}</b></h5>
-                    <button >open</button>
+                    
                 </div>
             </div>
         ))}
